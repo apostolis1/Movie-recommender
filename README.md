@@ -23,7 +23,8 @@ similar movies.
 * An SQL server, currently the project is set up to use mysql, however you can use whatever
 you want by modifying the sqlalchemy connection drivers on [datahandler/DbHandler](moviereccommender/../movierecommender/datahandler/DbHandler.py) class
 
-* Credentials for the connection should be placed in [data/creds.json](data/creds.json)
+* Credentials for the connection should be placed in data/creds.json which is not in version control, you can create it
+  by modifying the template on [data/creds_template.json](data/creds_template.json) 
 
 * The database Relational model looks as follows
 
@@ -36,6 +37,14 @@ you want by modifying the sqlalchemy connection drivers on [datahandler/DbHandle
   
   ```pip install -r requirements.txt```
 
+## Setup
+
+1. Make sure the requirements above (python packages and database) are satisfied
+2. Create the database schema, either by using the [dump file](docs/database/Mysql_dump_structure.sql) or by creating the tables manually based on the relational model. You could also leave it up to pandas Dataframe.my_sql function which can also create the tables if they don't exist, however this will not create the foreign key relations
+3. Extract the data and populate the database. This can be done easily with [e2e_setup.py](movierecommender/datahandler/e2e_setup.py)
+4. Once the database is populated, you have to create the plk file via Recommender.export_cosine_sim_to_pkl method on [Recommender.py](movierecommender/recommender/Recommender.py)
+
+In case of an error tt any of those steps, running the unit tests can help the debugging process
 
 ## Flask / CLI apps
 
