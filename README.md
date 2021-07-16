@@ -1,9 +1,5 @@
 # Movie Recommender
 
----
-
-
-
 ## Data extraction
 
 * Using the datasets from https://datasets.imdbws.com for basic info (imdb ids, cast, year, movie type, genres)
