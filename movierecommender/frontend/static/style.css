@@ -1,0 +1,50 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: cursive; */
+}
+
+body {
+    padding-top: 3vh;
+    background-color: rgba(0, 0, 255, 0.4);
+}
+label {
+    color: white;
+    font-size: large;
+}
+
+.form-container, .container-table, .header-container  {
+    border-width: 1px;
+    padding-top: 2vh;
+    padding-bottom: 1.2vh;
+    padding-right: 2vh;
+    border-radius: 18px;
+    margin-bottom: 3vh;
+    /* background-color: rgba(0, 0, 255, 0.571); */
+    background-color: rgba(0, 0, 255, 0.4);
+}
+
+.container-table {
+
+    background-color: rgba(0, 0, 255, 0.4);
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 10px;
+}
+
+tbody, td {
+    color: white;    
+}
+ 
+
+a {
+    color: white;
+}
+
+a:hover {
+    color:black;
+}
+
+.checkbox-btn {
+    height: 2vh;
+    margin-left:  2vh;
+}

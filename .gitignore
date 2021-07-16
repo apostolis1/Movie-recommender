@@ -1,0 +1,7 @@
+venv/
+.idea/
+creds.json
+data/temp/
+__pycache__
+*.pyc
+*.pkl
